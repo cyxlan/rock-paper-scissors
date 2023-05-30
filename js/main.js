@@ -60,8 +60,11 @@ function playRound(playerChoice, computerChoice) {
   }
 }
 
-const playerChoice = getPlayerChoice();
-console.log("Player choice:", playerChoice);
-const computerChoice = getComputerChoice();
-console.log("CPU choice:", computerChoice);
-console.log(playRound(playerChoice, computerChoice));
+// play 5 rounds of Rock Paper Scissors, display each round's results & the winner at the end
+function game() {
+  for (let i = 0; i < 5; i++) {
+    console.log(playRound(getPlayerChoice(), getComputerChoice()));
+  }
+}
+
+game();
