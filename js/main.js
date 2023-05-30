@@ -24,7 +24,9 @@ function getPlayerChoice() {
     alert("Invalid choice, try again.")
     getPlayerChoice()
   }
-
+  // convert choice to title case (capitalize first letter)
+  playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
+  
   return playerChoice;
 }
 
