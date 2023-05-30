@@ -22,7 +22,7 @@ function getPlayerChoice() {
   // if user entered an invalid choice, alert them & prompt again
   if (playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors") {
     alert("Invalid choice, try again.")
-    getPlayerChoice()
+    playerChoice = getPlayerChoice()
   }
   // convert choice to title case (capitalize first letter)
   playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
