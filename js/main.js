@@ -30,7 +30,7 @@ function getPlayerChoice() {
   return playerChoice;
 }
 
-// play 1 round of Rock Paper Scissors & return the result message
+// play 1 round of Rock Paper Scissors, display the result message & return the result
 function playRound(playerChoice, computerChoice) {
   // decide the result of the game
   let result;
@@ -47,23 +47,26 @@ function playRound(playerChoice, computerChoice) {
     result = "lose";
   }
 
-  // return the appropriate result message
+  // display the appropriate result message & return the result
   switch(result) {
     case "tie":
-      return `It's a Draw! ${playerChoice} ties with ${computerChoice}.`;
+      console.log(`It's a Draw! ${playerChoice} ties with ${computerChoice}.`);
+      return result;
       break;
     case "win":
-      return `You Win! ${playerChoice} beats ${computerChoice}!`
+      console.log(`You Win! ${playerChoice} beats ${computerChoice}!`);
+      return result;
       break;
     case "lose":
-      return `You Lose! ${computerChoice} beats ${playerChoice}!`
+      console.log(`You Lose! ${computerChoice} beats ${playerChoice}!`);
+      return result;
   }
 }
 
 // play 5 rounds of Rock Paper Scissors, display each round's results & the winner at the end
 function game() {
   for (let i = 0; i < 5; i++) {
-    console.log(playRound(getPlayerChoice(), getComputerChoice()));
+    playRound(getPlayerChoice(), getComputerChoice());
   }
 }
 
