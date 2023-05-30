@@ -65,8 +65,26 @@ function playRound(playerChoice, computerChoice) {
 
 // play 5 rounds of Rock Paper Scissors, display each round's results & the winner at the end
 function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+
   for (let i = 0; i < 5; i++) {
-    playRound(getPlayerChoice(), getComputerChoice());
+    console.log("------------ Round", i+1, "------------");
+    let result = playRound(getPlayerChoice(), getComputerChoice());
+    // update the scores according to the round result
+    switch(result) {
+      case "tie":
+        playerScore++;
+        computerScore++;
+        break;
+      case "win":
+        playerScore++;
+        break;
+      case "lose":
+        computerScore++;
+    }
+    console.log("Player:", playerScore);
+    console.log("CPU:", computerScore);
   }
 }
 
