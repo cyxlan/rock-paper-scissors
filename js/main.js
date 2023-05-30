@@ -86,6 +86,17 @@ function game() {
     console.log("Player:", playerScore);
     console.log("CPU:", computerScore);
   }
+
+  // decide the final winner & display message accordingly
+  if (playerScore === computerScore) {
+    console.log("Player & CPU tie!")
+  }
+  else if (playerScore > computerScore) {
+    console.log("Player wins!")
+  }
+  else {
+    console.log("CPU wins!")
+  }
 }
 
 game();
