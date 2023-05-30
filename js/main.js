@@ -30,7 +30,38 @@ function getPlayerChoice() {
   return playerChoice;
 }
 
+// play 1 round of Rock Paper Scissors & return the result message
+function playRound(playerChoice, computerChoice) {
+  // decide the result of the game
+  let result;
+  if (playerChoice === computerChoice) {
+    result = "tie";
+  }
+  else if (
+    (playerChoice === "Rock" && computerChoice === "Scissors") ||
+    (playerChoice === "Paper" && computerChoice === "Rock") ||
+    (playerChoice === "Scissors" && computerChoice === "Paper")) {
+    result = "win";
+  }
+  else {
+    result = "lose";
+  }
+
+  // return the appropriate result message
+  switch(result) {
+    case "tie":
+      return `It's a Draw! ${playerChoice} ties with ${computerChoice}.`;
+      break;
+    case "win":
+      return `You Win! ${playerChoice} beats ${computerChoice}!`
+      break;
+    case "lose":
+      return `You Lose! ${computerChoice} beats ${playerChoice}!`
+  }
+}
+
 const playerChoice = getPlayerChoice();
 console.log("Player choice:", playerChoice);
 const computerChoice = getComputerChoice();
 console.log("CPU choice:", computerChoice);
+console.log(playRound(playerChoice, computerChoice));
