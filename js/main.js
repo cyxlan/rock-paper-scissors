@@ -13,4 +13,22 @@ function getComputerChoice() {
     return "Scissors";
   }
 }
-console.log("CPU choice:", getComputerChoice());
+// prompt user for their choice (repeat until a valid choice is entered), then return it
+function getPlayerChoice() {
+  let playerChoice = prompt("Enter your choice (Rock, Paper, Scissors): ");
+
+  // convert choice to lowercase for case-insensitive check
+  playerChoice = playerChoice.toLowerCase();
+  // if user entered an invalid choice, alert them & prompt again
+  if (playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors") {
+    alert("Invalid choice, try again.")
+    getPlayerChoice()
+  }
+
+  return playerChoice;
+}
+
+const playerChoice = getPlayerChoice();
+console.log("Player choice:", playerChoice);
+const computerChoice = getComputerChoice();
+console.log("CPU choice:", computerChoice);
