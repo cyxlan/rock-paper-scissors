@@ -1,7 +1,8 @@
 const choiceBtns = document.querySelectorAll(".choice-btn");
 const roundResultMsg = document.querySelector("#round-result");
-const playerScoreMsg = document.querySelector('#player-score')
-const computerScoreMsg = document.querySelector('#computer-score')
+const playerScoreMsg = document.querySelector('#player-score');
+const computerScoreMsg = document.querySelector('#computer-score');
+const gameResultMsg = document.querySelector("#game-result");
 
 // randomly return 1 of "Rock", "Paper", or "Scissors"
 function getComputerChoice() {
@@ -114,5 +115,14 @@ choiceBtns.forEach((btn) => {
     }
     playerScoreMsg.textContent = `Player: ${playerScore}`;
     computerScoreMsg.textContent = `CPU: ${computerScore}`;
+
+    if (playerScore === 5 || computerScore === 5) {
+      if (playerScore === 5) {
+        gameResultMsg.textContent = "Player wins!";
+      }
+      else {
+        gameResultMsg.textContent = "CPU wins!";
+      }
+    }
   })
 })
