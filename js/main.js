@@ -1,3 +1,7 @@
+const rockBtn = document.querySelector("#rock-btn");
+const paperBtn = document.querySelector("#paper-btn");
+const scissorsBtn = document.querySelector("#scissors-btn");
+
 // randomly return 1 of "Rock", "Paper", or "Scissors"
 function getComputerChoice() {
   // get a random number between 0-3
