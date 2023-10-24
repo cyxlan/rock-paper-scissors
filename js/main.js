@@ -74,14 +74,16 @@ choiceBtns.forEach((btn) => {
     playerScoreMsg.textContent = `Player: ${playerScore}`;
     computerScoreMsg.textContent = `CPU: ${computerScore}`;
 
+    // when one player reaches 5 points
     if (playerScore === 5 || computerScore === 5) {
+      // decide & announce the winner
       if (playerScore === 5) {
         gameResultMsg.textContent = "Player wins!";
       }
       else {
         gameResultMsg.textContent = "CPU wins!";
       }
-
+      // disable the player choice buttons
       choiceBtns.forEach((btn) => {
         btn.setAttribute("disabled", "disabled");
       })
