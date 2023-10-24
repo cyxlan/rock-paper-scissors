@@ -5,6 +5,12 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 button {
   background-color: #fff;
   border: 5px solid #000;
@@ -17,7 +23,6 @@ button:not(:disabled):hover {
 
 .btn-container {
   display: flex;
-  justify-content: space-evenly;
 }
 .choice-btn {
   width: 300px;
@@ -27,6 +32,9 @@ button:not(:disabled):hover {
 .choice-btn:disabled {
   border-color: #979797;
   color: #979797;
+}
+.choice-btn:not(:last-child) {
+  border-right: 0px;
 }
 
 #again-btn {
