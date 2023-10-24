@@ -28,6 +28,9 @@ button:not(:disabled):hover {
   cursor: pointer;
 }
 
+.btn-container {
+  padding: 20px 0 30px;
+}
 .choice-btn {
   width: 300px;
   height: 300px;
@@ -43,7 +46,7 @@ button:not(:disabled):hover {
 
 #again-btn {
   display: none;
-  margin: 0 auto;
+  margin-top: 40px;
   width: 200px;
   height: 60px;
   font-size: 26px;
