@@ -1,4 +1,5 @@
 const choiceBtns = document.querySelectorAll(".choice-btn");
+const againBtn = document.querySelector('#again-btn');
 const roundResultMsg = document.querySelector("#round-result");
 const playerScoreMsg = document.querySelector('#player-score');
 const computerScoreMsg = document.querySelector('#computer-score');
@@ -87,6 +88,8 @@ choiceBtns.forEach((btn) => {
       choiceBtns.forEach((btn) => {
         btn.setAttribute("disabled", "disabled");
       })
+      // show play again button
+      againBtn.style.display = 'block';
     }
   })
 })
