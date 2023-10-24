@@ -42,11 +42,9 @@ function playRound(playerChoice, computerChoice) {
     case "tie":
       roundResultMsg.textContent = `It's a Draw! ${playerChoice} ties with ${computerChoice}.`;
       return result;
-      break;
     case "win":
       roundResultMsg.textContent = `You Win! ${playerChoice} beats ${computerChoice}!`;
       return result;
-      break;
     case "lose":
       roundResultMsg.textContent = `You Lose! ${computerChoice} beats ${playerChoice}!`;
       return result;
