@@ -88,3 +88,10 @@ function game() {
 
 game();
 */
+
+choiceBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    let playerChoice = btn.textContent;
+    playRound(playerChoice, getComputerChoice())
+  })
+})
