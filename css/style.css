@@ -27,6 +27,9 @@ button:not(:disabled):hover {
   background-color: #ffd323;
   cursor: pointer;
 }
+button:not(:disabled):hover::after {
+  content: "!";
+}
 
 .btn-container {
   padding: 20px 0 30px;
