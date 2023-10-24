@@ -68,8 +68,8 @@ function game() {
   let playerScore = 0;
   let computerScore = 0;
 
-  for (let i = 0; i < 5; i++) {
-    console.log("------------ Round", i+1, "------------");
+  // for (let i = 0; i < 5; i++) {
+  //   console.log("------------ Round", i+1, "------------");
     let result = playRound(getPlayerChoice(), getComputerChoice());
     // update the scores according to the round result
     switch(result) {
@@ -85,7 +85,7 @@ function game() {
     }
     console.log("Player:", playerScore);
     console.log("CPU:", computerScore);
-  }
+  // }
 
   // decide the final winner & display message accordingly
   if (playerScore === computerScore) {
