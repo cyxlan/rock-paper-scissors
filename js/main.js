@@ -93,3 +93,21 @@ choiceBtns.forEach((btn) => {
     }
   })
 })
+
+againBtn.addEventListener('click', () => {
+  againBtn.style.display = 'none';
+
+  // reset scores
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreMsg.textContent = `Player: ${playerScore}`;
+  computerScoreMsg.textContent = `CPU: ${computerScore}`;
+  // reset result messages
+  roundResultMsg.textContent = "";
+  gameResultMsg.textContent = "";
+
+  // enable the player choice buttons
+  choiceBtns.forEach((btn) => {
+    btn.removeAttribute("disabled");
+  })
+})
