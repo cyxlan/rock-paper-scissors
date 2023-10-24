@@ -49,6 +49,7 @@ function playRound(playerChoice, computerChoice) {
   }
 }
 
+/*
 // play 5 rounds of Rock Paper Scissors, display each round's results & the winner at the end
 function game() {
   let playerScore = 0;
@@ -86,3 +87,4 @@ function game() {
 }
 
 game();
+*/
