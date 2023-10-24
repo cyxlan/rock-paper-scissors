@@ -5,23 +5,34 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+button {
+  background-color: #fff;
+  border: 5px solid #000;
+  font-family: 'Courier New', Courier, monospace;
+}
+button:not(:disabled):hover {
+  background-color: #ffd323;
+  cursor: pointer;
+}
+
 .btn-container {
   display: flex;
   justify-content: space-evenly;
 }
 .choice-btn {
-  background-color: #fff;
-  border: 5px solid #000;
   width: 300px;
   height: 300px;
   font-size: 40px;
-  font-family: 'Courier New', Courier, monospace;
-}
-.choice-btn:not(:disabled):hover {
-  background-color: #ffd323;
-  cursor: pointer;
 }
 .choice-btn:disabled {
   border-color: #979797;
   color: #979797;
+}
+
+#again-btn {
+  display: none;
+  margin: 0 auto;
+  width: 200px;
+  height: 60px;
+  font-size: 26px;
 }
