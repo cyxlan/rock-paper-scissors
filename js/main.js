@@ -1,4 +1,5 @@
 const choiceBtns = document.querySelectorAll(".choice-btn");
+const roundResultMsg = document.querySelector("#round-result");
 
 // randomly return 1 of "Rock", "Paper", or "Scissors"
 function getComputerChoice() {
@@ -36,15 +37,15 @@ function playRound(playerChoice, computerChoice) {
   // display the appropriate result message & return the result
   switch(result) {
     case "tie":
-      console.log(`It's a Draw! ${playerChoice} ties with ${computerChoice}.`);
+      roundResultMsg.textContent = `It's a Draw! ${playerChoice} ties with ${computerChoice}.`;
       return result;
       break;
     case "win":
-      console.log(`You Win! ${playerChoice} beats ${computerChoice}!`);
+      roundResultMsg.textContent = `You Win! ${playerChoice} beats ${computerChoice}!`;
       return result;
       break;
     case "lose":
-      console.log(`You Lose! ${computerChoice} beats ${playerChoice}!`);
+      roundResultMsg.textContent = `You Lose! ${computerChoice} beats ${playerChoice}!`;
       return result;
   }
 }
