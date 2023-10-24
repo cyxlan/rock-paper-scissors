@@ -83,6 +83,10 @@ choiceBtns.forEach((btn) => {
       else {
         gameResultMsg.textContent = "CPU wins!";
       }
+
+      choiceBtns.forEach((btn) => {
+        btn.setAttribute("disabled", "disabled");
+      })
     }
   })
 })
