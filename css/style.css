@@ -47,7 +47,7 @@ button:not(:disabled):hover {
 #again-btn {
   display: none;
   margin-top: 40px;
-  width: 200px;
+  width: 250px;
   height: 60px;
   font-size: 26px;
 }
