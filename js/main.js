@@ -78,7 +78,10 @@ choiceBtns.forEach((btn) => {
     // when one player reaches 5 points
     if (playerScore === 5 || computerScore === 5) {
       // decide & announce the winner
-      if (playerScore === 5) {
+      if (playerScore === 5 && computerScore === 5) {
+        gameResultMsg.textContent = "Player and CPU tie.";
+      }
+      else if (playerScore === 5) {
         gameResultMsg.textContent = "Player wins!";
       }
       else {
