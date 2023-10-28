@@ -1,7 +1,7 @@
 # Rock Paper Scissors
 [Live preview](https://cyxlan.github.io/rock-paper-scissors/)
 
-Rock Paper Scissors game with 5 rounds against a randomized CPU.
+Rock Paper Scissors game to 5 points against a randomized CPU.
 
 ## Applied skills
 - declaring & calling JavaScript functions
